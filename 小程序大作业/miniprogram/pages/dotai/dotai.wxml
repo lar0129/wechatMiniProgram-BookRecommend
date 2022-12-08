@@ -1,0 +1,38 @@
+<!--pages/dotai/dotai.wxml-->
+
+<!--封面-->
+<image class="figure" src="/images/101.png"
+mode="aspectFill"
+>is
+</image>
+
+<!--发表按钮-->
+<button size="mini" bindtap="needpost" class="ispostbutton"
+  style="position: fixed; top: 280rpx;right: 0%;border: none; "
+  plain="true"
+  >
+  <image  src="/images/extra.png"
+    mode="aspectFill"  class="postbuttonimage"
+  ></image>
+</button>
+
+<!--发表小界面-->
+<view class="inputcontain"  hidden="{{isinput}}">
+  <view class="postbiaoti"> 
+    <text style="font-size:larger;   color:black " > 发表看法</text>
+   
+  </view> 
+
+  <textarea auto-focus="true" fixed="true"	bindinput="posting"
+          confirm-type ="done" maxlength = "{{500}}" 
+          placeholder="{{textholder}}"
+          value="{{postingtext}}"
+          class="postkuang">
+
+    <text style="position: fixed ;right: 15rpx;top: 720rpx; color:rgb(133, 223, 92)" > 
+    {{postingtext.length}}/{{maxposttext}}</text>
+  </textarea>
+  <button size="mini" type="primary" style="float: right;" bindtap="gotopost"> 
+          发表</button>
+  
+</view>

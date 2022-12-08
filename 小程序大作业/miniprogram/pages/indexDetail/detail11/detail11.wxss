@@ -1,0 +1,12 @@
+/* pages/detail11/detail11.wxss */
+.title{
+    margin:20rpx;
+    font-size: 36rpx;
+}
+.article{
+    padding:20rpx;
+    text-align:justify;
+    color:#888;
+    font-size:30rpx;
+    line-height: 44rpx;
+}

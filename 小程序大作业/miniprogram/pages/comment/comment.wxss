@@ -1,0 +1,33 @@
+/**index.wxss**/
+.body {
+  background-image: "";
+}
+.user-name{
+  font-size: larger;
+  color: rgb(0, 0, 0);
+}
+.sign{
+  font-size: small;
+  color: brown;
+  font-style: italic;
+}
+.content{
+  height: auto;
+  width: 100%;
+}
+.content text{
+  font-size: medium;
+  /* color: lightpink; */
+}
+.border-slice{
+  border-style:groove;
+  border-width: 6rpx;
+  border-color: skyblue;
+  height: auto;
+}
+.praise-text{
+  padding-top: 10rpx;
+  color: brown;
+  font-size: larger;
+  padding-left: 30rpx;
+}
