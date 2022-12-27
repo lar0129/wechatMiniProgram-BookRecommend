@@ -1,0 +1,6 @@
+<!--pages/bookcontent/bookcontent.wxml-->
+<view class='title' wx:for-index="idx">{{title}}</view>
+<text class='article' wx:for-index="idx">
+    {{article}}
+</text>
+

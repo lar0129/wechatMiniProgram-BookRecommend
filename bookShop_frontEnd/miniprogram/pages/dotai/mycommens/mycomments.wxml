@@ -1,0 +1,47 @@
+<!--index.wxml-->
+<view class="body">
+  <scroll-view class="main-scroll" scroll-y="true" scroll-x="false" style="height: 1400rpx;width: 100%;" >
+    <block wx:for="{{article}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" style="height: auto;">
+      <view class="border-slice">
+        <!--贴主信息-->
+        <view>
+          <view style="padding: 30rpx 16rpx 24rpx; float: left;">
+            <image src="{{item.userInfo.imgSrc}}" style="height: 80rpx;width: 80rpx;overflow: hidden;"></image>
+          </view>
+          <view style="padding:30rpx 0px 0px; overflow:hidden; height:110rpx;">
+            <view class="aricle-user-wrap">
+              <view>
+                <text class="user-name">{{item.userInfo.name}}\n</text>
+                <text class="sign">{{item.userInfo.sign}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!--帖子内容-->
+        <view>
+          <view style="padding: 10rpx 50rpx 50rpx 80rpx;">
+            <view class="content">
+              <text>{{item.content}}</text>
+            </view>
+        </view>
+        </view>
+        <!--点赞转发-->
+        <view style="height: 100rpx;">
+          <view style="padding: 0rpx 100rpx 30rpx ; float: right;display: flex;">
+            <view style="flex-direction: row;display: flex;height: fit-content;padding-right: 50rpx;">
+              <image src="{{transferImage}}" style="width: 60rpx;height: 60rpx;"></image>
+              <text class="praise-text">{{item.view}}</text>
+            </view>
+            <view style="flex-direction: row;display: flex;height: fit-content;">
+              <image src="{{praiseImage}}" style="width: 60rpx;height: 60rpx;"></image>
+              <text class="praise-text">{{item.praise}}</text>
+            </view>
+            <view style="flex-direction: row;display: flex;height: fit-content;">
+              <image bindtap="deletepost" data-no="{{idx}}" src="../../comment/image/删除.png" style="width: 60rpx; height: 60rpx; position: relative; left: 60rpx; top: 0rpx"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/computer/computer.wxml-->
+<view class='list'>
+<view class='item' wx:for='{{list}}' wx:for-item="item" wx:for-index="idx" wx:key='index'>
+    <navigator url="../bookcontent/bookcontent?type={{item.type}}&title={{item.title}}&level={{item.level}}&article={{item.details}}">
+    <view class="first_line">
+        <view class='title'>{{item.title}}</view>
+        <view class='level'>{{item.level}}</view>
+    </view>
+        <view class='item-wrapper'>
+            <view class='img'>
+                <image src='{{item.image}}'></image>
+            </view>
+            <text class='info'>
+                {{item.author}}\n
+                {{item.info}}
+            </text>
+        </view></navigator>
+    </view>
+</view>
+

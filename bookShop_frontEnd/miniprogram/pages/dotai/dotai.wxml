@@ -1,0 +1,40 @@
+<!--pages/dotai/dotai.wxml-->
+
+<!--页面背景-->
+<view>
+<image class="bgImage" mode="scaleToFill" src="https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/miniprogram-1/images/页面背景.png"></image>
+</view>
+
+<!--用户信息-->
+<view class="myInformation" style="width: 750rpx; height: 326rpx; display: block; box-sizing: border-box">
+  <view style="width: 274rpx; height: 207rpx; display: block; box-sizing: border-box">
+    <image class="figure" src="{{avator}}" style="height: 200rpx;width: 200rpx;overflow: hidden;" mode="aspectFill"  style="position: relative; left: 37rpx; top: 51rpx; width: 227rpx; height: 227rpx; display: inline-block; box-sizing: border-box"></image>
+  </view>  
+  <view class="user">
+      <view style="width: 421rpx; height: 200rpx; display: block; box-sizing: border-box; position: relative; left: 312rpx; top: -120rpx">
+        <text class="user-name" style="position: relative; left: 23rpx; top: -30rpx">{{username}}\n</text>
+        <text class="user-sign" style="position: relative; left: 23rpx; top: 27rpx">{{sign}}</text>
+      </view>
+  </view>
+  
+</view>
+
+<!--分割线-->
+<view class="divLine"></view>
+
+<!--功能跳转-->
+<button class="button1" bindtap="gotoPage_postsign" style="position: relative; left: 0rpx; top: 50rpx; width: 650rpx; height: 100rpx; display: block; box-sizing: border-box"
+>
+<text class="text1" style="position: relative; left: -200rpx; top: 7rpx" >修改签名</text>
+</button>
+
+<button class="button2" bindtap="gotoPage_postcommens" style="position: relative; left: 0rpx; top: 137rpx; width: 650rpx; height: 100rpx; display: block; box-sizing: border-box">
+<text class="text2" style="position: relative; left: -200rpx; top: 7rpx">发表评论</text>
+</button>
+
+<button  class="button3" bindtap="gotoPage_mycommens" style="position: relative; left: 0rpx; top: 220rpx; width: 650rpx; height: 100rpx; display: block; box-sizing: border-box">
+<text class="text3" style="position: relative; left: -150rpx; top: 7rpx">查看我的评论</text>
+</button>
+
+
+

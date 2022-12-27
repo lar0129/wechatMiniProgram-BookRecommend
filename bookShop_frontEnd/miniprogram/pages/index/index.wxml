@@ -1,0 +1,70 @@
+<!--轮播图-->
+<view class='banner'>
+    <swiper autoplay="true" interval="3000" bindchange="swiperChange">
+        <swiper-item>
+            <image src='https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/books.jpg'></image>
+            <view class="desc">邺侯家多书,插架三万轴。 一一悬牙签,新若手未触。</view>
+        </swiper-item>
+
+        <swiper-item>
+            <image src='https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/sanwei.png'></image>
+            <view class="desc">读经味如稻粱,读史味如肴馔,诸子百家味如醯醢。</view>
+        </swiper-item>
+
+        <swiper-item>
+            <image src='https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/Tsinghua.png'></image>
+            <view class="desc">新旧合冶，殊途同归，肴核仁义，闻道日肥。</view>
+        </swiper-item>
+
+    </swiper>
+    <view class='banner-current'>{{currentIndex+1}}/3</view>
+</view>
+
+
+<view class='book-type'>
+    <view class='bookclassify'>
+        <navigator url="../computer/computer?type=计算机"><image src='../../images/计算机.png'></image></navigator>
+        <view>计算机</view>
+    </view>
+
+    <view class='bookclassify'>
+        <navigator url="../computer/computer?type=科学"><image src='../../images/科学.png'></image></navigator>
+        <view>科学</view>
+    </view>
+
+    <view class='bookclassify'>
+        <navigator url="../computer/computer?type=艺术"><image src='../../images/艺术.png'></image></navigator>
+        <view>艺术</view>
+    </view>
+
+    <view class='bookclassify'>
+        <navigator url="../computer/computer?type=历史"><image src='../../images/历史.png'></image></navigator>
+        <view>历史</view>
+    </view>
+
+    <view class='bookclassify'>
+        <navigator url="../computer/computer?type=文学"><image src='../../images/文学.png'></image></navigator>
+        <view>文学</view>
+    </view>
+
+    <view class='bookclassify'>
+        <navigator url="../computer/computer?type=哲学"><image src='../../images/哲学.png'></image></navigator>
+        <view>哲学</view>
+    </view>
+
+    <view class='list'>
+    <view class='item' wx:for="{{sayings}}" wx:key="key">
+        <navigator url= "../bookcontent/bookcontent?type={{item.type}}&title={{item.title}}&level={{item.level}}&article={{item.info}}">
+                <view class='title'>{{item.title}}</view>
+                <view class='item-wrapper'>
+                    <view class='img'>
+                        <image src="{{item.img}}" ></image>
+                    </view>
+                    <text class='info'>{{item.info}}</text>
+                </view>
+        </navigator>
+    </view>
+</view>
+
+</view>
+

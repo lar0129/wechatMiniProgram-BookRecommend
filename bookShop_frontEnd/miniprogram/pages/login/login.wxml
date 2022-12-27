@@ -1,0 +1,19 @@
+<!--背景图片-->
+<view>
+<image class="bg-image" mode="scaleToFill" src="https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/miniprogram/images/bg.jpeg"></image>
+</view>
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}"  bindtap="getUserProfile" style="background-color: rgba(240, 248, 255, 0); width: 500rpx; height: 200rpx; position: relative; left: 0rpx; top: 450rpx; flex-direction: column;align-items: center;color: rgba(170, 170, 170, 0);">  </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+   <view class="usermotto" bindtap="gotoIndex">
+   <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

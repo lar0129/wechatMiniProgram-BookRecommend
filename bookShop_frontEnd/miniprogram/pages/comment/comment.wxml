@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view>
+<image class="bg-image" mode="scaleToFill" src="{{bgImg}}"></image>
+</view>
+<block>
+    <view style="height: 200rpx;width: 100%; position: relative;">
+        <image class="hotBG" src="{{bgImg}}"></image>
+        <text decode="true" style="height: 200rpx;line-height: 200rpx;font-size: 50rpx; color: rgb(4, 20, 245); position: absolute;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今日热帖</text>
+    </view>
+    <view style="height: 450rpx;position: relative;">
+        <swiper class="swiper-container" circular="true" style="height: 100%;">
+            <swiper-item>
+                <image class="swiperImg" src="{{swiperImg1}}"></image>
+                <view class="desc">冰岛，世界的尽头</view>
+            </swiper-item>
+            <swiper-item>
+                <image class="swiperImg" src="{{swiperImg2}}"></image>
+                <view class="desc">读资本论的一点小感触</view>
+            </swiper-item>
+            <swiper-item>
+                <image class="swiperImg" src="{{swiperImg3}}"></image>
+                <view class="desc">文艺复兴的代表作</view>
+            </swiper-item>
+    </swiper>
+    </view>
+</block>
+<view class="body">
+  <scroll-view class="main-scroll" scroll-y="true" scroll-x="false" style="height: 1400rpx;width: 100%;" >
+    <block wx:for="{{article}}" wx:for-index="idx" wx:for-item="item" wx:key="idx" style="height: auto;">
+      <view class="border-slice">
+        <!--贴主信息-->
+        <view>
+          <view style="padding: 30rpx 16rpx 24rpx; float: left;">
+            <image src="{{item.userInfo.imgSrc}}" style="height: 80rpx;width: 80rpx;overflow: hidden;"></image>
+          </view>
+          <view style="padding:30rpx 0px 0px; overflow:hidden; height:110rpx;">
+            <view class="aricle-user-wrap">
+              <view>
+                <text class="user-name">{{item.userInfo.name}}\n</text>
+                <text class="sign">{{item.userInfo.sign}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!--帖子内容-->
+        <view>
+          <view style="padding: 10rpx 50rpx 50rpx 80rpx;">
+            <view class="content">
+              <text>{{item.content}}</text>
+            </view>
+        </view>
+        </view>
+        <!--点赞转发-->
+        <view style="height: 100rpx;">
+          <view style="padding: 0rpx 100rpx 30rpx ; float: right;display: flex;">
+            <!-- <view style="flex-direction: row;display: flex;height: fit-content;padding-right: 50rpx;">
+              <image src="{{item.isTransfer?haveTransfer:transferImage}}" style="width: 60rpx;height: 60rpx;"></image>
+              <text class="praise-text">{{item.transfer}}</text>
+            </view> -->
+            <view style="flex-direction: row;display: flex;height: fit-content;padding-right: 50rpx;">
+              <image src="./image/浏览.png" style="width: 60rpx;height: 60rpx;"></image>
+              <text class="praise-text">{{item.view}}</text>
+            </view>
+            <view style="flex-direction: row;display: flex;height: fit-content;">
+              <image bindtap="praise" data-no="{{idx}}" src="{{item.isPraise?havePraise:praiseImage}}" style="width: 60rpx;height: 60rpx;"></image>
+              <text class="praise-text">{{item.praise}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

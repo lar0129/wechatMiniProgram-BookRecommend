@@ -1,0 +1,20 @@
+/* pages/dotai/postsign/postsign.wxss *//* pages/dotai/postcommens/postcommens.wxss */
+
+.divLine{
+  background: #00d9ff;
+  width: 100%;
+  height: 3rpx;
+ }
+ .postkuang{
+   border: 5rpx solid rgb(82, 80, 72);
+  
+ }
+
+ .button2{
+   background-color:limegreen;
+   color: rgb(255, 255, 255);
+ }
+ .button1{
+  background-color:rgb(205, 50, 50);
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,25 @@
+
+<!--修改签名-->
+<view class="postbiaoti"> 
+  <text style="font-size: larger; color: black; position: relative; left: 308rpx; top: 0rpx" > 个性签名</text> 
+  </view> 
+
+<!--分割线-->
+<view class="divLine" style="position: relative; left: 0rpx; top: 37rpx"></view>
+
+<textarea auto-focus="true" fixed="true"	bindinput="posting"
+  confirm-type ="done" maxlength = "{{500}}" 
+  placeholder="{{textholder}}"
+  value="{{postingtext}}"
+  class="postkuang" style="position: relative; left: 29rpx; top: 83rpx; width: 700rpx; height: 516rpx; display: block; box-sizing: border-box">
+
+    <text style="position: fixed; right: 15rpx; top: 559rpx; color: rgb(133, 223, 92); left: 619rpx; width: 134rpx; height: 48rpx; display: block; box-sizing: border-box" > 
+    {{postingtext.length}}/{{maxposttext}}</text>
+</textarea>
+
+<button  class="button2" style="float: right; position: relative; left: -51rpx; top: 114rpx; width: 184rpx; height: 80rpx; display: block; box-sizing: border-box" bindtap="gotopost"> 
+          完成</button>
+  
+<button  class="button1" style="float: left; position: relative; left: 53rpx; top: 114rpx; width: 184rpx; height: 80rpx; display: block; box-sizing: border-box" bindtap="nopost"> 
+          取消</button> 
+

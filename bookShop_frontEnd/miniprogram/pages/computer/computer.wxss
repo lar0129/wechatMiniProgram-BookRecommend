@@ -1,0 +1,45 @@
+/* pages/computer/computer.wxss */
+.list{
+    padding: 0 20rpx;
+    
+}
+.item{
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    border-bottom: 1rpx solid #eee;
+    position: relative;
+    margin-bottom: 20rpx;
+}
+.first_line {
+    display: flex;
+}
+.title{
+    font-size:32rpx;
+    color:#1a1a1a;
+    margin-bottom: 10rpx;
+}
+.level {
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    font-size:35rpx;
+    color:rebeccapurple;
+    background-color:rgb(118, 203, 231);
+}
+.item-wrapper{
+    display: flex;
+}
+.img image{
+    width: 130rpx;
+    height: 180rpx;
+}
+.info{
+    color:#777;
+    font-size: 28rpx;
+    padding-left: 20rpx;
+}
+.info1{
+    color:#777;
+    font-size: 28rpx;
+    padding-left: 20rpx;
+}
+
