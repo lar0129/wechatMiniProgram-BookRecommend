@@ -10,16 +10,16 @@ Page({
     data: {
         type:"default",
         list:[
-            {
-                id: 0,
-                title:"chy的伟大著作第一部",
-                type: "计算机",
-                details:"点进来干嘛！~",
-                image:'https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/截屏2022-12-13 下午6.37.04.png',
-                author: "chy",
-                info:"chy不想写简介",
-                level:"神话"
-            }
+            // {
+            //     id: 0,
+            //     title:"chy的伟大著作第一部",
+            //     type: "计算机",
+            //     details:"点进来干嘛！~",
+            //     image:'https://lar-blog.oss-cn-nanjing.aliyuncs.com/picGo_img/截屏2022-12-13 下午6.37.04.png',
+            //     author: "chy",
+            //     info:"chy不想写简介",
+            //     level:"神话"
+            // }
         ]
     },
     /**
@@ -53,6 +53,7 @@ Page({
                 level: res[i].level
             }
             if(newBooks.type == that.data.type)
+            // @ts-ignore
                 that.data.list.push(newBooks)
             }
             that.setData({ // 只有setdata才能双向绑定？

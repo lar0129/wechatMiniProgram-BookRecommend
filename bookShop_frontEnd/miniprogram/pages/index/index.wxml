@@ -54,7 +54,7 @@
 
     <view class='list'>
     <view class='item' wx:for="{{sayings}}" wx:key="key">
-        <navigator url= "../bookcontent/bookcontent?type={{item.type}}&title={{item.title}}&level={{item.level}}&article={{item.info}}">
+        <navigator url= "../bookcontent/bookcontent?type={{item.type}}&title={{item.title}}&level={{item.level}}&article={{item.article}}">
                 <view class='title'>{{item.title}}</view>
                 <view class='item-wrapper'>
                     <view class='img'>
